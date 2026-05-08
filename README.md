@@ -39,6 +39,8 @@ Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-r
 
 Use SKILL.md as the main entrypoint if you support skill-style instructions.
 
+Before every new project session, refresh this workflow by re-reading the latest repo files, especially SKILL.md and README.md.
+
 Before executing any project-related task, identify the task type, ask for missing screenshots/files/logs/context if needed, rewrite the task into a detailed execution prompt, show me the final prompt, and wait for my approval before doing any work.
 
 This applies to code, UI, bugs, features, docs, deployment, repo cleanup, prompt writing, and anything contributing to my project.
@@ -52,8 +54,23 @@ If your agent supports skill-style repos or reads `SKILL.md`, use this:
 Install or use this repo as a skill:
 https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
 
-Use SKILL.md as the main instruction file. Follow the approval-based prompt optimizer workflow for every project-related task.
+Use SKILL.md as the main instruction file. Before every new project session, re-read the latest SKILL.md and README.md. Follow the approval-based prompt optimizer workflow for every project-related task.
 ```
+
+## Keeping the workflow updated
+
+When this repo changes, agents should refresh the workflow before starting a new project session.
+
+The latest behavior is defined in:
+
+1. `SKILL.md`
+2. `README.md`
+3. `PROMPT_OPTIMIZER.md`
+4. `CONTEXT_QUESTIONS.md`
+5. `EXAMPLES.md`
+6. `CHANGELOG.md`
+
+Agents may cache previous instructions, so the workflow now tells agents to re-read the latest files at the start of each new chat, project session, or repo session.
 
 ## Workflow chart
 
@@ -115,6 +132,7 @@ This workflow helps prevent:
 | `PROMPT_OPTIMIZER.md` | The full workflow rules Hermes should follow |
 | `CONTEXT_QUESTIONS.md` | What Hermes should ask before creating the final prompt |
 | `EXAMPLES.md` | Before-and-after examples for common project tasks |
+| `CHANGELOG.md` | Recent workflow changes and update notes |
 
 ## Expected agent behavior
 

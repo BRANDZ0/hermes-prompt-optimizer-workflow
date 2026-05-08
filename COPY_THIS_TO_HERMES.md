@@ -24,9 +24,17 @@ For every project-related task, Hermes should:
 5. Wait for approval.
 6. Execute only after the user approves.
 
-## Terminal install option
+## Install with skills.sh
 
-If you prefer installing it as a Hermes skill through the CLI, run:
+To install through the open agent skills CLI, run:
+
+```bash
+npx skills add BRANDZ0/hermes-prompt-optimizer-workflow
+```
+
+## Hermes terminal install option
+
+If you prefer installing it as a Hermes skill through the Hermes CLI, run:
 
 ```bash
 hermes skills install BRANDZ0/hermes-prompt-optimizer-workflow --now

@@ -4,6 +4,20 @@ Use this skill when the user is working on a project and wants safer, clearer AI
 
 This skill makes Hermes-style agents pause before execution, improve the task prompt, ask for missing context, show the improved prompt, and wait for user approval before making changes.
 
+## Refresh rule
+
+At the start of every new chat, project session, or repo session, re-read the latest version of this repo before applying the workflow.
+
+Always refresh from:
+
+1. `SKILL.md`
+2. `README.md`
+3. `PROMPT_OPTIMIZER.md` when deeper rules are needed
+4. `CONTEXT_QUESTIONS.md` when deciding what context to ask for
+5. `EXAMPLES.md` when examples would help
+
+If the user says this workflow was updated, re-read the repo before continuing.
+
 ## When to use this skill
 
 Use this skill for every project-related task, including:
@@ -171,3 +185,4 @@ Read these files only when needed:
 - `CONTEXT_QUESTIONS.md` for task-specific context questions
 - `EXAMPLES.md` for examples of optimized prompts
 - `COPY_THIS_TO_HERMES.md` for the user-facing setup prompt
+- `CHANGELOG.md` for recent workflow changes

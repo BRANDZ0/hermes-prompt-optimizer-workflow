@@ -2,8 +2,8 @@
 
 [![skills.sh](https://skills.sh/b/brandz0/hermes-prompt-optimizer-workflow)](https://skills.sh/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow)
 [![Hermes Agent](https://img.shields.io/badge/Hermes%20Agent-compatible-black)](https://github.com/nousresearch/hermes-agent)
-[![Skill](https://img.shields.io/badge/type-skill-blue)](./SKILL.md)
-[![Approval First](https://img.shields.io/badge/workflow-approval%20first-green)](./SKILL.md)
+[![Skill](https://img.shields.io/badge/type-skill-blue)](./skills/hermes-prompt-optimizer-workflow/SKILL.md)
+[![Approval First](https://img.shields.io/badge/workflow-approval%20first-green)](./skills/hermes-prompt-optimizer-workflow/SKILL.md)
 [![GitHub stars](https://img.shields.io/github/stars/BRANDZ0/hermes-prompt-optimizer-workflow?style=social)](https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow/stargazers)
 
 A Hermes Agent skill that turns project-related requests into clear, approval-based execution prompts before the agent edits, changes, or builds anything.
@@ -24,7 +24,11 @@ View the indexed skill page here:
 https://skills.sh/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow
 ```
 
-This helps the skill become discoverable on skills.sh because installs through the skills CLI are tracked anonymously by skills.sh.
+This repo uses the standard skill folder layout:
+
+```text
+skills/hermes-prompt-optimizer-workflow/SKILL.md
+```
 
 ## Hermes terminal install option
 
@@ -54,7 +58,7 @@ If you do not want to use terminal commands, paste this into Hermes:
 Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks:
 https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
 
-Use SKILL.md as the main instruction file.
+Use skills/hermes-prompt-optimizer-workflow/SKILL.md as the main instruction file.
 ```
 
 That is enough for most users if Hermes can read the repo link.
@@ -142,11 +146,12 @@ Hermes must first optimize the request, ask for missing context when helpful, sh
 
 | File | Purpose |
 |---|---|
-| `SKILL.md` | Main Hermes skill entrypoint with metadata |
+| `skills/hermes-prompt-optimizer-workflow/SKILL.md` | Main skill entrypoint with metadata |
+| `skills/hermes-prompt-optimizer-workflow/references/` | Skill reference files for context questions, examples, and deeper rules |
 | `COPY_THIS_TO_HERMES.md` | Simple paste-in instructions for Hermes |
-| `PROMPT_OPTIMIZER.md` | Full workflow rules |
-| `CONTEXT_QUESTIONS.md` | What Hermes should ask before creating the final prompt |
-| `EXAMPLES.md` | Before-and-after examples for common project tasks |
+| `PROMPT_OPTIMIZER.md` | Root copy of the full workflow rules |
+| `CONTEXT_QUESTIONS.md` | Root copy of context questions |
+| `EXAMPLES.md` | Root copy of examples |
 | `CHANGELOG.md` | Recent workflow changes and update notes |
 
 ## Keeping the workflow updated
@@ -155,12 +160,10 @@ This skill tells Hermes to re-read the latest repo files at the start of new cha
 
 The latest behavior is defined in:
 
-1. `SKILL.md`
-2. `README.md`
-3. `PROMPT_OPTIMIZER.md`
-4. `CONTEXT_QUESTIONS.md`
-5. `EXAMPLES.md`
-6. `CHANGELOG.md`
+1. `skills/hermes-prompt-optimizer-workflow/SKILL.md`
+2. `skills/hermes-prompt-optimizer-workflow/references/`
+3. `README.md`
+4. `CHANGELOG.md`
 
 ## Expected behavior
 

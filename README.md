@@ -4,9 +4,33 @@ A Hermes Agent skill that turns project-related requests into clear, approval-ba
 
 Built for [NousResearch Hermes Agent](https://github.com/nousresearch/hermes-agent), an open-source AI agent with a skill system.
 
-## Easiest install
+## Easiest setup
 
-Run this in your terminal:
+Paste this into Hermes:
+
+```text
+Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks:
+https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
+
+Use SKILL.md as the main instruction file.
+```
+
+That is enough for most users if Hermes can read the repo link.
+
+## What Hermes will do
+
+For every project-related task, Hermes should:
+
+1. Identify the task type.
+2. Ask for missing context, screenshots, files, logs, or examples.
+3. Rewrite the request into a stronger execution prompt.
+4. Show the improved prompt to the user.
+5. Wait for approval.
+6. Execute only after the user approves.
+
+## Terminal install option
+
+If you prefer installing it as a Hermes skill through the CLI, run:
 
 ```bash
 hermes skills install BRANDZ0/hermes-prompt-optimizer-workflow --now
@@ -39,17 +63,6 @@ If Hermes warns because this is a community GitHub skill, review the repo first.
 hermes skills install BRANDZ0/hermes-prompt-optimizer-workflow --now --force
 ```
 
-## No terminal fallback
-
-If you do not want to install it through the CLI, paste this into Hermes:
-
-```text
-Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks:
-https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
-
-Use SKILL.md as the main instruction file.
-```
-
 ## What this does
 
 Instead of letting Hermes immediately execute vague requests, this workflow makes Hermes pause and improve the task first.
@@ -62,14 +75,7 @@ fix this mobile ui the buttons look funny
 
 Hermes should not start editing right away.
 
-It should first:
-
-1. Identify the task type.
-2. Ask for missing context, screenshots, files, logs, or examples.
-3. Rewrite the request into a strong execution prompt.
-4. Show the improved prompt to the user.
-5. Wait for approval.
-6. Execute only after the user approves.
+It should first create a better plan/prompt, ask for anything missing, show the final prompt, and wait for approval.
 
 ## Workflow chart
 

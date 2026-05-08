@@ -1,5 +1,6 @@
 # Hermes Prompt Optimizer Workflow
 
+[![skills.sh](https://skills.sh/b/brandz0/hermes-prompt-optimizer-workflow)](https://skills.sh/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow)
 [![Hermes Agent](https://img.shields.io/badge/Hermes%20Agent-compatible-black)](https://github.com/nousresearch/hermes-agent)
 [![Skill](https://img.shields.io/badge/type-skill-blue)](./SKILL.md)
 [![Approval First](https://img.shields.io/badge/workflow-approval%20first-green)](./SKILL.md)

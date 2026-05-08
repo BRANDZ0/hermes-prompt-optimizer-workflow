@@ -5,11 +5,13 @@ Paste this into your Hermes agent after giving it the repository link.
 ```text
 Read this repo and follow the Hermes Prompt Optimizer Workflow.
 
+Before every new project session, refresh this workflow by re-reading the latest repo files, especially SKILL.md and README.md.
+
 For every project-related task I give you, do not execute immediately.
 
 First:
 
-1. Classify the task type.
+1. Identify the task type.
 2. Decide what context is missing.
 3. Ask for screenshots, files, logs, examples, repo context, or design references if needed.
 4. Rewrite my request into a clear, detailed execution prompt.
@@ -45,14 +47,16 @@ Do not show huge explanations unless I ask.
 Never skip the pre-approval step unless I explicitly say to bypass approval for that specific task.
 ```
 
-## Optional stronger version
+## Strict version
 
 Use this version if you want Hermes to be stricter.
 
 ```text
 Install this workflow as a permanent project behavior.
 
-For every project-related request, you must run the Prompt Optimizer Workflow before execution. You must classify the task, ask for missing context when useful, create a final execution prompt, show it to me, and wait for approval.
+Before every new project session, refresh this workflow by re-reading the latest repo files, especially SKILL.md and README.md.
+
+For every project-related request, you must run the Prompt Optimizer Workflow before execution. You must identify the task type, ask for missing context when useful, create a final execution prompt, show it to me, and wait for approval.
 
 Do not edit files, run commands, restructure code, change UI, update docs, or modify configuration until I approve the optimized prompt.
 

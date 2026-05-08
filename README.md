@@ -4,6 +4,11 @@ A structured workflow for turning project-related requests into clear, approval-
 
 This repository is designed to be shared with a Hermes-style agent. The agent reads the instructions, installs the workflow into its behavior, and then uses it for every project-related task.
 
+It can be used two ways:
+
+1. As a simple repo-link instruction pack.
+2. As a skill-style workflow using `SKILL.md` as the main agent entrypoint.
+
 ## What this does
 
 Instead of letting an agent immediately execute vague requests, this workflow makes the agent pause and improve the task first.
@@ -18,7 +23,7 @@ The agent should not start editing right away.
 
 It should first:
 
-1. Classify the task.
+1. Identify the task type.
 2. Ask for missing context, screenshots, files, logs, or examples.
 3. Rewrite the request into a strong execution prompt.
 4. Show the improved prompt to the user.
@@ -32,16 +37,29 @@ Give your Hermes agent this repository link and paste this message:
 ```text
 Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks.
 
-Before executing any project-related task, classify the task, ask for missing screenshots/files/logs/context if needed, rewrite the task into a detailed execution prompt, show me the final prompt, and wait for my approval before doing any work.
+Use SKILL.md as the main entrypoint if you support skill-style instructions.
+
+Before executing any project-related task, identify the task type, ask for missing screenshots/files/logs/context if needed, rewrite the task into a detailed execution prompt, show me the final prompt, and wait for my approval before doing any work.
 
 This applies to code, UI, bugs, features, docs, deployment, repo cleanup, prompt writing, and anything contributing to my project.
+```
+
+## Skill-style setup
+
+If your agent supports skill-style repos or reads `SKILL.md`, use this:
+
+```text
+Install or use this repo as a skill:
+https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
+
+Use SKILL.md as the main instruction file. Follow the approval-based prompt optimizer workflow for every project-related task.
 ```
 
 ## Workflow chart
 
 ```mermaid
 flowchart TD
-    A[User gives project-related task] --> B[Hermes classifies task type]
+    A[User gives project-related task] --> B[Hermes identifies task type]
     B --> C[Hermes checks what context is missing]
     C --> D{Is more context needed?}
     D -- Yes --> E[Ask for screenshots, files, logs, examples, or repo details]
@@ -92,8 +110,9 @@ This workflow helps prevent:
 
 | File | Purpose |
 |---|---|
+| `SKILL.md` | Main skill-style entrypoint for agents that support skill instructions |
 | `COPY_THIS_TO_HERMES.md` | The simple message users paste into Hermes |
-| `PROMPT_OPTIMIZER.md` | The main workflow rules Hermes should follow |
+| `PROMPT_OPTIMIZER.md` | The full workflow rules Hermes should follow |
 | `CONTEXT_QUESTIONS.md` | What Hermes should ask before creating the final prompt |
 | `EXAMPLES.md` | Before-and-after examples for common project tasks |
 
@@ -164,6 +183,7 @@ Ideal for:
 - Claude Code style workflows
 - Cursor-style workflows
 - Codex-style workflows
+- skill-style agent repos
 - repo-specific AI instructions
 - team prompt standards
 - reusable AI operating procedures

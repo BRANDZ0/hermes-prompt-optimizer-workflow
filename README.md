@@ -1,7 +1,9 @@
 # Hermes Prompt Optimizer Workflow
 
-[![skills.sh](https://skills.sh/b/brandz0/hermes-prompt-optimizer-workflow)](https://skills.sh/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow)
-[![Hermes Agent Skill](https://img.shields.io/badge/Hermes%20Agent-skill-black)](https://github.com/nousresearch/hermes-agent)
+[![Hermes Agent](https://img.shields.io/badge/Hermes%20Agent-compatible-black)](https://github.com/nousresearch/hermes-agent)
+[![Skill](https://img.shields.io/badge/type-skill-blue)](./SKILL.md)
+[![Approval First](https://img.shields.io/badge/workflow-approval%20first-green)](./SKILL.md)
+[![GitHub stars](https://img.shields.io/github/stars/BRANDZ0/hermes-prompt-optimizer-workflow?style=social)](https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow/stargazers)
 
 A Hermes Agent skill that turns project-related requests into clear, approval-based execution prompts before the agent edits, changes, or builds anything.
 

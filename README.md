@@ -1,6 +1,6 @@
 # Hermes Prompt Optimizer Workflow
 
-[![skills.sh](https://skills.sh/b/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow)](https://skills.sh/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow)
+[![skills.sh](https://skills.sh/b/BRANDZ0/hermes-prompt-optimizer-workflow)](https://skills.sh/brandz0/hermes-prompt-optimizer-workflow/hermes-prompt-optimizer-workflow)
 [![Hermes Agent Skill](https://img.shields.io/badge/Hermes%20Agent-skill-black)](https://github.com/nousresearch/hermes-agent)
 
 A Hermes Agent skill that turns project-related requests into clear, approval-based execution prompts before the agent edits, changes, or builds anything.

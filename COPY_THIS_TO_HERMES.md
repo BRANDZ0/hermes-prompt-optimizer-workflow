@@ -1,9 +1,30 @@
 # Copy This To Hermes
 
-Paste this into your Hermes agent after giving it the repository link.
+Use this only if you do not install the skill through the Hermes CLI.
+
+## Best install method
+
+Run this in your terminal:
+
+```bash
+hermes skills install BRANDZ0/hermes-prompt-optimizer-workflow --now
+```
+
+Then tell Hermes:
 
 ```text
-Read this repo and follow the Hermes Prompt Optimizer Workflow.
+Use the hermes-prompt-optimizer-workflow skill for this project. For every project-related task, improve the prompt first, ask for missing context if needed, show me the final prompt, and wait for approval before executing.
+```
+
+## Paste-only fallback
+
+If you do not want to use the CLI, paste this into Hermes:
+
+```text
+Read this repo and follow the Hermes Prompt Optimizer Workflow:
+https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
+
+Use SKILL.md as the main instruction file.
 
 Before every new project session, refresh this workflow by re-reading the latest repo files, especially SKILL.md and README.md.
 
@@ -19,18 +40,7 @@ First:
 6. Wait for my approval.
 7. Only execute after I approve.
 
-This applies to:
-
-- coding tasks
-- UI fixes
-- mobile responsiveness
-- bug fixes
-- feature work
-- README/docs
-- deployment
-- repo changes
-- prompt writing
-- anything contributing to my project
+This applies to coding tasks, UI fixes, mobile responsiveness, bug fixes, feature work, README/docs, deployment, repo changes, prompt writing, and anything contributing to my project.
 
 Always preserve existing functionality unless I clearly ask to change it.
 
@@ -42,23 +52,12 @@ For repo tasks, inspect relevant files before editing.
 
 Keep prompts structured, detailed, and practical.
 
-Do not show huge explanations unless I ask.
-
 Never skip the pre-approval step unless I explicitly say to bypass approval for that specific task.
 ```
 
-## Strict version
+## Updating later
 
-Use this version if you want Hermes to be stricter.
-
-```text
-Install this workflow as a permanent project behavior.
-
-Before every new project session, refresh this workflow by re-reading the latest repo files, especially SKILL.md and README.md.
-
-For every project-related request, you must run the Prompt Optimizer Workflow before execution. You must identify the task type, ask for missing context when useful, create a final execution prompt, show it to me, and wait for approval.
-
-Do not edit files, run commands, restructure code, change UI, update docs, or modify configuration until I approve the optimized prompt.
-
-After approval, execute the task using the approved prompt only. If new information appears during execution that changes the plan, stop and ask for approval again.
+```bash
+hermes skills check
+hermes skills update hermes-prompt-optimizer-workflow
 ```

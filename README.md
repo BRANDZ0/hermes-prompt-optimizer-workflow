@@ -1,6 +1,7 @@
 # Hermes Prompt Optimizer Workflow
 
-[![skills.sh](https://skills.sh/b/BRANDZ0/hermes-prompt-optimizer-workflow)](https://skills.sh/BRANDZ0/hermes-prompt-optimizer-workflow)
+[![Install with skills.sh](https://img.shields.io/badge/skills.sh-install%20with%20npx-blue)](https://skills.sh/docs)
+[![Hermes Agent Skill](https://img.shields.io/badge/Hermes%20Agent-skill-black)](https://github.com/nousresearch/hermes-agent)
 
 A Hermes Agent skill that turns project-related requests into clear, approval-based execution prompts before the agent edits, changes, or builds anything.
 
@@ -28,6 +29,8 @@ npx skills add BRANDZ0/hermes-prompt-optimizer-workflow
 ```
 
 This helps the skill become discoverable on skills.sh because installs through the skills CLI are tracked anonymously by skills.sh.
+
+The official skills.sh install-count badge may show `resource not found` until the repo has been indexed through CLI installs. This README uses a stable install badge so the repo does not show a broken badge while it is new.
 
 ## What Hermes will do
 

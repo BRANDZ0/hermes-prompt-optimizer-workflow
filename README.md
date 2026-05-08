@@ -1,17 +1,58 @@
 # Hermes Prompt Optimizer Workflow
 
-A structured workflow for turning project-related requests into clear, approval-based execution prompts before an AI agent edits, changes, or builds anything.
+A Hermes Agent skill that turns project-related requests into clear, approval-based execution prompts before the agent edits, changes, or builds anything.
 
-This repository is designed for [NousResearch Hermes Agent](https://github.com/nousresearch/hermes-agent), an open-source AI agent that supports skills and project workflows. Hermes can read this repo, use `SKILL.md` as the main instruction file, and apply the workflow to project-related tasks.
+Built for [NousResearch Hermes Agent](https://github.com/nousresearch/hermes-agent), an open-source AI agent with a skill system.
 
-It can be used two ways:
+## Easiest install
 
-1. As a simple repo-link instruction pack.
-2. As a Hermes skill-style workflow using `SKILL.md` as the main agent entrypoint.
+Run this in your terminal:
+
+```bash
+hermes skills install BRANDZ0/hermes-prompt-optimizer-workflow --now
+```
+
+Then in Hermes, say:
+
+```text
+Use the hermes-prompt-optimizer-workflow skill for this project. For every project-related task, improve the prompt first, ask for missing context if needed, show me the final prompt, and wait for approval before executing.
+```
+
+If your current session does not pick it up, start fresh:
+
+```text
+/reset
+```
+
+## Update later
+
+When this repo gets improved, update the skill with:
+
+```bash
+hermes skills check
+hermes skills update hermes-prompt-optimizer-workflow
+```
+
+If Hermes warns because this is a community GitHub skill, review the repo first. If you trust it, install with:
+
+```bash
+hermes skills install BRANDZ0/hermes-prompt-optimizer-workflow --now --force
+```
+
+## No terminal fallback
+
+If you do not want to install it through the CLI, paste this into Hermes:
+
+```text
+Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks:
+https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
+
+Use SKILL.md as the main instruction file.
+```
 
 ## What this does
 
-Instead of letting an agent immediately execute vague requests, this workflow makes the agent pause and improve the task first.
+Instead of letting Hermes immediately execute vague requests, this workflow makes Hermes pause and improve the task first.
 
 Example request:
 
@@ -19,7 +60,7 @@ Example request:
 fix this mobile ui the buttons look funny
 ```
 
-The agent should not start editing right away.
+Hermes should not start editing right away.
 
 It should first:
 
@@ -29,48 +70,6 @@ It should first:
 4. Show the improved prompt to the user.
 5. Wait for approval.
 6. Execute only after the user approves.
-
-## 30-second setup
-
-Give Hermes Agent this repository link and paste this message:
-
-```text
-Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks.
-
-Use SKILL.md as the main entrypoint if you support skill-style instructions.
-
-Before every new project session, refresh this workflow by re-reading the latest repo files, especially SKILL.md and README.md.
-
-Before executing any project-related task, identify the task type, ask for missing screenshots/files/logs/context if needed, rewrite the task into a detailed execution prompt, show me the final prompt, and wait for my approval before doing any work.
-
-This applies to code, UI, bugs, features, docs, deployment, repo cleanup, prompt writing, and anything contributing to my project.
-```
-
-## Hermes skill-style setup
-
-If Hermes Agent supports installing the repo as a skill in your setup, use this:
-
-```text
-Install or use this repo as a Hermes skill:
-https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
-
-Use SKILL.md as the main instruction file. Before every new project session, re-read the latest SKILL.md and README.md. Follow the approval-based prompt optimizer workflow for every project-related task.
-```
-
-## Keeping the workflow updated
-
-When this repo changes, agents should refresh the workflow before starting a new project session.
-
-The latest behavior is defined in:
-
-1. `SKILL.md`
-2. `README.md`
-3. `PROMPT_OPTIMIZER.md`
-4. `CONTEXT_QUESTIONS.md`
-5. `EXAMPLES.md`
-6. `CHANGELOG.md`
-
-Agents may cache previous instructions, so the workflow now tells agents to re-read the latest files at the start of each new chat, project session, or repo session.
 
 ## Workflow chart
 
@@ -92,7 +91,7 @@ flowchart TD
 
 ## When Hermes should use this
 
-Hermes should use this workflow for every project-related task, including:
+Use this workflow for every project-related task:
 
 | Task type | Examples |
 |---|---|
@@ -111,30 +110,31 @@ Hermes should not execute project-related tasks immediately.
 
 Hermes must first optimize the request, ask for missing context when helpful, show the improved prompt, and wait for approval.
 
-## Why this helps
-
-This workflow helps prevent:
-
-- AI agents starting too fast
-- vague prompts causing bad code changes
-- unnecessary rewrites
-- broken existing functionality
-- missed screenshots or logs
-- unclear acceptance criteria
-- large edits when small edits were needed
-
 ## Main files
 
 | File | Purpose |
 |---|---|
 | `SKILL.md` | Main Hermes skill entrypoint with metadata |
-| `COPY_THIS_TO_HERMES.md` | The simple message users paste into Hermes |
-| `PROMPT_OPTIMIZER.md` | The full workflow rules Hermes should follow |
+| `COPY_THIS_TO_HERMES.md` | Simple paste-in instructions for Hermes |
+| `PROMPT_OPTIMIZER.md` | Full workflow rules |
 | `CONTEXT_QUESTIONS.md` | What Hermes should ask before creating the final prompt |
 | `EXAMPLES.md` | Before-and-after examples for common project tasks |
 | `CHANGELOG.md` | Recent workflow changes and update notes |
 
-## Expected agent behavior
+## Keeping the workflow updated
+
+This skill tells Hermes to re-read the latest repo files at the start of new chats, project sessions, or repo sessions.
+
+The latest behavior is defined in:
+
+1. `SKILL.md`
+2. `README.md`
+3. `PROMPT_OPTIMIZER.md`
+4. `CONTEXT_QUESTIONS.md`
+5. `EXAMPLES.md`
+6. `CHANGELOG.md`
+
+## Expected behavior
 
 When installed correctly, Hermes should respond to project tasks like this:
 
@@ -156,13 +156,7 @@ Inspect the mobile button layout and fix spacing, sizing, alignment, and respons
 Approve this prompt before I execute?
 ```
 
-## Approval-first workflow
-
-The approval step is required.
-
-Hermes must not skip directly from user request to execution unless the user explicitly says to bypass approval for that task.
-
-Recommended approval words:
+## Recommended approval words
 
 ```text
 approved

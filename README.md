@@ -2,12 +2,12 @@
 
 A structured workflow for turning project-related requests into clear, approval-based execution prompts before an AI agent edits, changes, or builds anything.
 
-This repository is designed to be shared with a Hermes-style agent. The agent reads the instructions, installs the workflow into its behavior, and then uses it for every project-related task.
+This repository is designed for [NousResearch Hermes Agent](https://github.com/nousresearch/hermes-agent), an open-source AI agent that supports skills and project workflows. Hermes can read this repo, use `SKILL.md` as the main instruction file, and apply the workflow to project-related tasks.
 
 It can be used two ways:
 
 1. As a simple repo-link instruction pack.
-2. As a skill-style workflow using `SKILL.md` as the main agent entrypoint.
+2. As a Hermes skill-style workflow using `SKILL.md` as the main agent entrypoint.
 
 ## What this does
 
@@ -32,7 +32,7 @@ It should first:
 
 ## 30-second setup
 
-Give your Hermes agent this repository link and paste this message:
+Give Hermes Agent this repository link and paste this message:
 
 ```text
 Read this repo and follow the Hermes Prompt Optimizer Workflow for all project-related tasks.
@@ -46,12 +46,12 @@ Before executing any project-related task, identify the task type, ask for missi
 This applies to code, UI, bugs, features, docs, deployment, repo cleanup, prompt writing, and anything contributing to my project.
 ```
 
-## Skill-style setup
+## Hermes skill-style setup
 
-If your agent supports skill-style repos or reads `SKILL.md`, use this:
+If Hermes Agent supports installing the repo as a skill in your setup, use this:
 
 ```text
-Install or use this repo as a skill:
+Install or use this repo as a Hermes skill:
 https://github.com/BRANDZ0/hermes-prompt-optimizer-workflow
 
 Use SKILL.md as the main instruction file. Before every new project session, re-read the latest SKILL.md and README.md. Follow the approval-based prompt optimizer workflow for every project-related task.
@@ -127,7 +127,7 @@ This workflow helps prevent:
 
 | File | Purpose |
 |---|---|
-| `SKILL.md` | Main skill-style entrypoint for agents that support skill instructions |
+| `SKILL.md` | Main Hermes skill entrypoint with metadata |
 | `COPY_THIS_TO_HERMES.md` | The simple message users paste into Hermes |
 | `PROMPT_OPTIMIZER.md` | The full workflow rules Hermes should follow |
 | `CONTEXT_QUESTIONS.md` | What Hermes should ask before creating the final prompt |
@@ -189,19 +189,19 @@ Hermes should always:
 
 This repository is not a prompt marketplace and does not copy private prompts from any service.
 
-It is an open workflow pattern for making AI agents pause, gather context, improve the task, request approval, and then execute safely.
+It is an open workflow pattern for making Hermes Agent pause, gather context, improve the task, request approval, and then execute safely.
 
 ## Best use case
 
-This works best for people who use coding agents or project agents and want more control before the agent makes changes.
+This works best for people who use Hermes Agent or coding agents and want more control before the agent makes changes.
 
 Ideal for:
 
-- Hermes-style agents
+- Hermes Agent skills
+- Hermes project workflows
 - Claude Code style workflows
 - Cursor-style workflows
 - Codex-style workflows
-- skill-style agent repos
 - repo-specific AI instructions
 - team prompt standards
 - reusable AI operating procedures

@@ -1,8 +1,23 @@
+---
+name: hermes-prompt-optimizer-workflow
+description: Approval-based prompt optimizer workflow for project-related Hermes Agent tasks.
+version: 1.0.0
+metadata:
+  hermes:
+    category: productivity
+    tags:
+      - prompt-engineering
+      - prompt-optimizer
+      - agent-workflow
+      - ai-coding
+      - approval-workflow
+---
+
 # Hermes Prompt Optimizer Workflow Skill
 
-Use this skill when the user is working on a project and wants safer, clearer AI-agent execution.
+Use this skill with NousResearch Hermes Agent when the user is working on a project and wants safer, clearer AI-agent execution.
 
-This skill makes Hermes-style agents pause before execution, improve the task prompt, ask for missing context, show the improved prompt, and wait for user approval before making changes.
+This skill makes Hermes Agent pause before execution, improve the task prompt, ask for missing context, show the improved prompt, and wait for user approval before making changes.
 
 ## Refresh rule
 
